@@ -19,3 +19,41 @@ document.getElementById('btn-two').addEventListener('click',
         alert('Board Updated Successfully')
     }
 )
+document.getElementById('btn-three').addEventListener('click',
+    function () {
+        completedCard('btn-three')
+        activityDiv('task-three')
+        alert('Board Updated Successfully')
+    }
+)
+document.getElementById('btn-four').addEventListener('click',
+    function () {
+        completedCard('btn-four')
+        activityDiv('task-four')
+        alert('Board Updated Successfully')
+    }
+)
+document.getElementById('btn-five').addEventListener('click',
+    function () {
+        completedCard('btn-five')
+        activityDiv('task-five')
+        alert('Board Updated Successfully')
+    }
+)
+document.getElementById('btn-six').addEventListener('click',
+    function () {
+        completedCard('btn-six')
+        activityDiv('task-six')
+        alert('Board Updated Successfully')
+    }
+)
+let clickedButtons = new Set();
+
+document.querySelectorAll(".btn-completed").forEach((button, index) => {
+    button.addEventListener("click", function () {
+        clickedButtons.add(index);
+        if (clickedButtons.size === 6) {
+            alert("Congrats!!!You Have Completed All The Tasks.");
+        }
+    });
+});
