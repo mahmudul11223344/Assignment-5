@@ -4,17 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment-5</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style>
-        .poppins-regular {
-            font-family: "Poppins", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-            color: black;
-        }
-    </style>
+    <title>Taskmeter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="poppins-regular bg-blue-50 min-h-screen">
@@ -53,8 +51,7 @@
                     </div>
                 </div>
                 <!-- Discovery Card -->
-                <div id="discover"
-                    class="bg-blue-50 lg:col-span-2  px-5 py-2 my-auto rounded-lg flex-row flex gap-3 bg-gradient-to-r from-blue-500 via-blue-400 to-violet-300">
+                <div id="discover" class="bg-blue-50 lg:col-span-2  px-5 py-2 my-auto rounded-lg flex-row flex gap-3 bg-gradient-to-r from-blue-500 via-blue-400 to-violet-300">
                     <div>
                         <img src="assets/board.png" alt="">
                     </div>
@@ -62,118 +59,122 @@
                         <h1 class="lg:text-2xl text-white">Discover Something <br>New Today!</h1>
                     </div>
                 </div>
+
                 <!-- Date Card -->
                 <div class="bg-blue-50 my-auto px-4 py-6 rounded-lg grid grid-cols-3 gap-3">
-                    <div class="bg-white h-12 w-12 p-3 rounded-3xl">
+                     <div class="bg-white h-12 w-12 p-3 rounded-3xl">
                         <img src="assets/calender.png" alt="">
                     </div>
                     <div id="date" class="col-span-2">
                     </div>
                 </div>
-                <section class="grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-4 mt-7">
-                    <div class="p-4 rounded-xl bg-blue-50 space-y-4">
-                        <button class="px-3 py-2 rounded-lg bg-white">ShopEase</button>
-                        <p id="task-one" class="2xl:text-2xl text-xl font-[500]">Fix Mobile Button Issue</p>
-                        <p title="check for overlapping elements, and ensure onClick works properly and ensure onClick works properly"
-                            class="p-3 text-gray-400 bg-white rounded-lg text-ellipsis whitespace-nowrap overflow-hidden ">
-                            Debug using Chrome DevTools, <br> check for overlapping
-                            elements, and ensure onClick works properly
-                            and ensure onClick works properly</p>
-                        <hr class="border-dashed">
-                        <div class="flex justify-between">
-                            <div>
-                                <p class="text-gray-500 text-sm">Deadline</p>
-                                <p>21 March 2025</p>
-                            </div>
-                            <button id="btn-one"
-                                class="btn btn-completed border-none hover:bg-gray-500 text-white bg-[#3752FD]">Completed</button>
+            </section>
+            <hr class="border-dashed mt-7">
+            <!-- Common Cards -->
+            <section class="grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-4 mt-7">
+                <div class="p-4 rounded-xl bg-blue-50 space-y-4">
+                    <button class="px-3 py-2 rounded-lg bg-white">ShopEase</button>
+                    <p id="task-one" class="2xl:text-2xl text-xl font-[500]">Fix Mobile Button Issue</p>
+                    <p title="check for overlapping elements, and ensure onClick works properly and ensure onClick works properly"
+                        class="p-3 text-gray-400 bg-white rounded-lg text-ellipsis whitespace-nowrap overflow-hidden ">
+                        Debug using Chrome DevTools, <br> check for overlapping
+                        elements, and ensure onClick works properly
+                        and ensure onClick works properly</p>
+                    <hr class="border-dashed">
+                    <div class="flex justify-between">
+                        <div>
+                            <p class="text-gray-500 text-sm">Deadline</p>
+                            <p>21 March 2025</p>
                         </div>
+                        <button id="btn-one" class="btn btn-completed border-none hover:bg-gray-500 text-white bg-[#3752FD]">Completed</button>
                     </div>
-                    <div class="p-4 rounded-xl bg-blue-50 space-y-4">
-                        <button class="px-3 py-2 rounded-lg bg-white">CloudSync</button>
-                        <p id="task-two" class="2xl:text-2xl text-xl font-[500]">Add dark Mode</p>
-                        <p title="localStorage, update CSS variables dynamically, and apply a smooth transition effect."
-                            class="p-3 text-gray-400 bg-white rounded-lg text-ellipsis whitespace-nowrap overflow-hidden">
-                            Store the user's preference in <br> localStorage, update CSS variables dynamically, and apply a
-                            smooth transition effect.</p>
-                        <hr class="border-dashed">
-                        <div class="flex justify-between">
-                            <div>
-                                <p class="text-gray-500 text-sm">Deadline</p>
-                                <p>21 March 2025</p>
-                            </div>
-                            <button id="btn-two" class="btn btn-completed border-none hover:bg-red-400 text-white bg-[#3752FD]">Completed</button>
+                </div>
+                <div class="p-4 rounded-xl bg-blue-50 space-y-4">
+                    <button class="px-3 py-2 rounded-lg bg-white">CloudSync</button>
+                    <p id="task-two" class="2xl:text-2xl text-xl font-[500]">Add dark Mode</p>
+                    <p title="localStorage, update CSS variables dynamically, and apply a smooth transition effect."
+                        class="p-3 text-gray-400 bg-white rounded-lg text-ellipsis whitespace-nowrap overflow-hidden">
+                        Store the user's preference in <br> localStorage, update CSS variables dynamically, and apply a
+                        smooth transition effect.</p>
+                    <hr class="border-dashed">
+                    <div class="flex justify-between">
+                        <div>
+                            <p class="text-gray-500 text-sm">Deadline</p>
+                            <p>21 March 2025</p>
                         </div>
+                        <button id="btn-two" class="btn btn-completed border-none hover:bg-red-400 text-white bg-[#3752FD]">Completed</button>
                     </div>
-                    <div class="p-4 rounded-xl bg-blue-50 space-y-4">
-                        <button class="px-3 py-2 rounded-lg bg-white">SwiftPay</button>
-                        <p id="task-three" class="2xl:text-2xl text-xl font-[500]">Optimize Home Page</p>
-                        <p title="involves creating a user-centric design with intuitive navigation, a responsive layout, and clear call-to-action buttons."
-                            class="p-3 text-gray-400 bg-white rounded-lg text-ellipsis whitespace-nowrap overflow-hidden">
-                            Optimizing SwiftPay’s homepage <br> involves creating a user-centric design with intuitive
-                            navigation, a responsive layout, and clear call-to-action buttons.</p>
-                        <hr class="border-dashed">
-                        <div class="flex justify-between">
-                            <div>
-                                <p class="text-gray-500 text-sm">Deadline</p>
-                                <p>21 March 2025</p>
-                            </div>
-                            <button id="btn-three" class="btn  btn-completed border-none hover:bg-violet-400 text-white bg-[#3752FD]">Completed</button>
+                </div>
+                <div class="p-4 rounded-xl bg-blue-50 space-y-4">
+                    <button class="px-3 py-2 rounded-lg bg-white">SwiftPay</button>
+                    <p id="task-three" class="2xl:text-2xl text-xl font-[500]">Optimize Home Page</p>
+                    <p title="involves creating a user-centric design with intuitive navigation, a responsive layout, and clear call-to-action buttons."
+                        class="p-3 text-gray-400 bg-white rounded-lg text-ellipsis whitespace-nowrap overflow-hidden">
+                        Optimizing SwiftPay’s homepage <br> involves creating a user-centric design with intuitive
+                        navigation, a responsive layout, and clear call-to-action buttons.</p>
+                    <hr class="border-dashed">
+                    <div class="flex justify-between">
+                        <div>
+                            <p class="text-gray-500 text-sm">Deadline</p>
+                            <p>21 March 2025</p>
                         </div>
+                        <button id="btn-three" class="btn  btn-completed border-none hover:bg-violet-400 text-white bg-[#3752FD]">Completed</button>
                     </div>
-                    <div class="p-4 rounded-xl bg-blue-50 space-y-4">
-                        <button class="px-3 py-2 rounded-lg bg-white">Meta</button>
-                        <p id="task-four" class="2xl:text-2xl text-xl font-[500]">Add New emoji🤲</p>
-                        <p title="offerings to enhance user expression across its platforms,including Facebook, Messenger, and Instagram. By introducing new emojis, Meta aims to provide users with a richer and more diverse way to communicate emotions, reactions, and ideas in digital conversations."
-                            class="p-3 text-gray-400 bg-white rounded-lg text-ellipsis whitespace-nowrap overflow-hidden">
-                            Meta is expanding its emoji <br> offerings to enhance user expression across its platforms,
-                            including Facebook, Messenger, and Instagram. By introducing new emojis, Meta aims to provide
-                            users
-                            with a richer and more diverse way to communicate emotions, reactions, and ideas in digital
-                            conversations.</p>
-                        <hr class="border-dashed">
-                        <div class="flex justify-between">
-                            <div>
-                                <p class="text-gray-500 text-sm">Deadline</p>
-                                <p>21 March 2025</p>
-                            </div>
-                            <button id="btn-four" class="btn  btn-completed border-none hover:bg-amber-600 text-white bg-[#3752FD]">Completed</button>
+                </div>
+                <div class="p-4 rounded-xl bg-blue-50 space-y-4">
+                    <button class="px-3 py-2 rounded-lg bg-white">Meta</button>
+                    <p id="task-four" class="2xl:text-2xl text-xl font-[500]">Add New emoji🤲</p>
+                    <p title="offerings to enhance user expression across its platforms,including Facebook, Messenger, and Instagram. By introducing new emojis, Meta aims to provide users with a richer and more diverse way to communicate emotions, reactions, and ideas in digital conversations."
+                        class="p-3 text-gray-400 bg-white rounded-lg text-ellipsis whitespace-nowrap overflow-hidden">
+                        Meta is expanding its emoji <br> offerings to enhance user expression across its platforms,
+                        including Facebook, Messenger, and Instagram. By introducing new emojis, Meta aims to provide
+                        users
+                        with a richer and more diverse way to communicate emotions, reactions, and ideas in digital
+                        conversations.</p>
+                    <hr class="border-dashed">
+                    <div class="flex justify-between">
+                        <div>
+                            <p class="text-gray-500 text-sm">Deadline</p>
+                            <p>21 March 2025</p>
                         </div>
+                        <button id="btn-four" class="btn  btn-completed border-none hover:bg-amber-600 text-white bg-[#3752FD]">Completed</button>
                     </div>
-                    <div class="p-4 rounded-xl bg-blue-50 space-y-4">
-                        <button class="px-3 py-2 rounded-lg bg-white">Google LLC</button>
-                        <p id="task-five" class="2xl:text-2xl text-xl font-[500]">Integrate OpenAI API</p>
-                        <p title="integrating OpenAI’s API into its ecosystem to enhance AI-driven services, automation, and cloud-based applications"
-                            class="p-3 text-gray-400 bg-white rounded-lg text-ellipsis whitespace-nowrap overflow-hidden">
-                            Google LLC has been increasingly <br> integrating OpenAI’s API into its ecosystem to enhance
-                            AI-driven services, automation, and cloud-based applications</p>
-                        <hr class="border-dashed">
-                        <div class="flex justify-between">
-                            <div>
-                                <p class="text-gray-500">Deadline</p>
-                                <p>21 March 2025</p>
-                            </div>
-                            <button id="btn-five" class="btn  btn-completed border-none hover:bg-yellow-500 text-white bg-[#3752FD]">Completed</button>
+                </div>
+                <div class="p-4 rounded-xl bg-blue-50 space-y-4">
+                    <button class="px-3 py-2 rounded-lg bg-white">Google LLC</button>
+                    <p id="task-five" class="2xl:text-2xl text-xl font-[500]">Integrate OpenAI API</p>
+                    <p title="integrating OpenAI’s API into its ecosystem to enhance AI-driven services, automation, and cloud-based applications"
+                        class="p-3 text-gray-400 bg-white rounded-lg text-ellipsis whitespace-nowrap overflow-hidden">
+                        Google LLC has been increasingly <br> integrating OpenAI’s API into its ecosystem to enhance
+                        AI-driven services, automation, and cloud-based applications</p>
+                    <hr class="border-dashed">
+                    <div class="flex justify-between">
+                        <div>
+                            <p class="text-gray-500">Deadline</p>
+                            <p>21 March 2025</p>
                         </div>
+                        <button id="btn-five" class="btn  btn-completed border-none hover:bg-yellow-500 text-white bg-[#3752FD]">Completed</button>
                     </div>
-                    <div class="p-4 rounded-xl bg-blue-50 space-y-4">
-                        <button class="px-3 py-2 rounded-lg bg-white">Glassdoar</button>
-                        <p id="task-six" class="2xl:text-2xl text-xl font-[500]">Improve Job Searching</p>
-                        <p title="enhancing its platform by integrating advanced AI technologies, including OpenAI’s API, to improve job searching and career insights."
-                            class="p-3 text-gray-400 bg-white rounded-lg text-ellipsis whitespace-nowrap overflow-hidden">
-                            Glassdoor is continuously <br> enhancing its platform by integrating advanced AI technologies,
-                            including OpenAI’s API, to improve job searching and career insights.</p>
-                        <hr class="border-dashed">
-                        <div class="flex justify-between">
-                            <div>
-                                <p class="text-gray-500 text-sm">Deadline</p>
-                                <p>21 March 2025</p>
-                            </div>
-                            <button id="btn-six" class="btn  btn-completed border-none text-white bg-[#3752FD]">Completed</button>
+                </div>
+                <div class="p-4 rounded-xl bg-blue-50 space-y-4">
+                    <button class="px-3 py-2 rounded-lg bg-white">Glassdoar</button>
+                    <p id="task-six" class="2xl:text-2xl text-xl font-[500]">Improve Job Searching</p>
+                    <p title="enhancing its platform by integrating advanced AI technologies, including OpenAI’s API, to improve job searching and career insights."
+                        class="p-3 text-gray-400 bg-white rounded-lg text-ellipsis whitespace-nowrap overflow-hidden">
+                        Glassdoor is continuously <br> enhancing its platform by integrating advanced AI technologies,
+                        including OpenAI’s API, to improve job searching and career insights.</p>
+                    <hr class="border-dashed">
+                    <div class="flex justify-between">
+                        <div>
+                            <p class="text-gray-500 text-sm">Deadline</p>
+                            <p>21 March 2025</p>
                         </div>
+                        <button id="btn-six" class="btn  btn-completed border-none text-white bg-[#3752FD]">Completed</button>
                     </div>
-                </section>
-                 <!-- Activity Section -->
+                </div>
+            </section>
+        </section>
+        <!-- Activity Section -->
         <section class="p-5 rounded-xl lg:col-span-2 mt-8 lg:mt-0 space-y-4 bg-white">
             <div class="flex justify-center gap-3">
                 <img src="assets/activity.png" alt="">
