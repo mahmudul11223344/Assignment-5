@@ -57,3 +57,22 @@ document.querySelectorAll(".btn-completed").forEach((button, index) => {
         }
     });
 });
+document.getElementById('clear-btn').addEventListener('click',
+    function (event){
+        event.preventDefault();
+        let oldContainer=document.getElementById('activity-container');
+        oldContainer.innerHTML='';
+    }
+)
+document.getElementById('bg-button').addEventListener('click',
+    function(){
+        let random=Math.random()*200;
+        let randomInt=Math.floor(random)
+        let randomOne=Math.random()*300;
+        let randomOneInt=Math.floor(randomOne)
+        let randomTwo=Math.random()*400;
+        let randomTwoInt=Math.floor(randomTwo)
+        let randomColor=`rgb(${randomInt},${randomOneInt},${randomTwoInt})`
+        document.body.style.backgroundColor=randomColor;
+    }
+)
