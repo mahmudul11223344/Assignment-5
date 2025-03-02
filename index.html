@@ -7,10 +7,188 @@
     <title>Assignment-5</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .poppins-regular {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color: black;
+        }
+    </style>
 </head>
 
-<body>
-    <h1>i am home alhamdulillah</h1>
+<body class="poppins-regular bg-blue-50 min-h-screen">
+    <!--header section here -->
+    <header class="pt-4 w-11/12 mx-auto">
+        <div class="navbar bg-white rounded-xl">
+            <div class="flex-1 gap-2 pl-2">
+                <img class="w-10" src="assets/logo.png" alt="">
+                <p class="md:text-2xl">Dev<span class="font-bold">Board</span></p>
+            </div>
+            <div class="flex-none">
+                <div class="flex items-centerb gap-2 bg-blue-50 px-3 py-2 rounded-3xl">
+                    <img src="assets/checkbox.png" alt="">
+                    <p id="checked" class="text-xl font-bold">23</p>
+                </div>
+                <div id="bg-button" class="bg-blue-50 cursor-pointer p-1.5 rounded-3xl ml-4">
+                    <img class="w-8 h-8" src="assets/theme-btn.png" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Ending Header -->
+    <!-- Main section -->
+    <main class="w-11/12 mx-auto mt-5 rounded-xl gap-5 grid lg:grid-cols-7 pb-14">
+        <section class="bg-white p-6 lg:col-span-5 rounded-lg">
+            <!-- Top 3 cards -->
+            <section class="grid lg:grid-cols-4 md:grid-cols-3 gap-4">
+                <!-- Task Card -->
+                <div class="bg-blue-50 my-auto pl-4 py-6 rounded-lg grid grid-cols-3 gap-3">
+                    <div class="bg-white h-12 w-12 p-3 rounded-3xl">
+                        <img src="assets/checkbox.png" alt="">
+                    </div>
+                    <div class="col-span-2">
+                        <h1 class="text-sm">Task Assigned</h1>
+                        <p id="task-negative" class="text-xl font-bold">06</p>
+                    </div>
+                </div>
+                <!-- Discovery Card -->
+                <div id="discover"
+                    class="bg-blue-50 lg:col-span-2  px-5 py-2 my-auto rounded-lg flex-row flex gap-3 bg-gradient-to-r from-blue-500 via-blue-400 to-violet-300">
+                    <div>
+                        <img src="assets/board.png" alt="">
+                    </div>
+                    <div class="my-auto">
+                        <h1 class="lg:text-2xl text-white">Discover Something <br>New Today!</h1>
+                    </div>
+                </div>
+                <!-- Date Card -->
+                <div class="bg-blue-50 my-auto px-4 py-6 rounded-lg grid grid-cols-3 gap-3">
+                    <div class="bg-white h-12 w-12 p-3 rounded-3xl">
+                        <img src="assets/calender.png" alt="">
+                    </div>
+                    <div id="date" class="col-span-2">
+                    </div>
+                </div>
+                <section class="grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-4 mt-7">
+                    <div class="p-4 rounded-xl bg-blue-50 space-y-4">
+                        <button class="px-3 py-2 rounded-lg bg-white">ShopEase</button>
+                        <p id="task-one" class="2xl:text-2xl text-xl font-[500]">Fix Mobile Button Issue</p>
+                        <p title="check for overlapping elements, and ensure onClick works properly and ensure onClick works properly"
+                            class="p-3 text-gray-400 bg-white rounded-lg text-ellipsis whitespace-nowrap overflow-hidden ">
+                            Debug using Chrome DevTools, <br> check for overlapping
+                            elements, and ensure onClick works properly
+                            and ensure onClick works properly</p>
+                        <hr class="border-dashed">
+                        <div class="flex justify-between">
+                            <div>
+                                <p class="text-gray-500 text-sm">Deadline</p>
+                                <p>21 March 2025</p>
+                            </div>
+                            <button id="btn-one"
+                                class="btn btn-completed border-none hover:bg-gray-500 text-white bg-[#3752FD]">Completed</button>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-blue-50 space-y-4">
+                        <button class="px-3 py-2 rounded-lg bg-white">CloudSync</button>
+                        <p id="task-two" class="2xl:text-2xl text-xl font-[500]">Add dark Mode</p>
+                        <p title="localStorage, update CSS variables dynamically, and apply a smooth transition effect."
+                            class="p-3 text-gray-400 bg-white rounded-lg text-ellipsis whitespace-nowrap overflow-hidden">
+                            Store the user's preference in <br> localStorage, update CSS variables dynamically, and apply a
+                            smooth transition effect.</p>
+                        <hr class="border-dashed">
+                        <div class="flex justify-between">
+                            <div>
+                                <p class="text-gray-500 text-sm">Deadline</p>
+                                <p>21 March 2025</p>
+                            </div>
+                            <button id="btn-two" class="btn btn-completed border-none hover:bg-red-400 text-white bg-[#3752FD]">Completed</button>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-blue-50 space-y-4">
+                        <button class="px-3 py-2 rounded-lg bg-white">SwiftPay</button>
+                        <p id="task-three" class="2xl:text-2xl text-xl font-[500]">Optimize Home Page</p>
+                        <p title="involves creating a user-centric design with intuitive navigation, a responsive layout, and clear call-to-action buttons."
+                            class="p-3 text-gray-400 bg-white rounded-lg text-ellipsis whitespace-nowrap overflow-hidden">
+                            Optimizing SwiftPay’s homepage <br> involves creating a user-centric design with intuitive
+                            navigation, a responsive layout, and clear call-to-action buttons.</p>
+                        <hr class="border-dashed">
+                        <div class="flex justify-between">
+                            <div>
+                                <p class="text-gray-500 text-sm">Deadline</p>
+                                <p>21 March 2025</p>
+                            </div>
+                            <button id="btn-three" class="btn  btn-completed border-none hover:bg-violet-400 text-white bg-[#3752FD]">Completed</button>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-blue-50 space-y-4">
+                        <button class="px-3 py-2 rounded-lg bg-white">Meta</button>
+                        <p id="task-four" class="2xl:text-2xl text-xl font-[500]">Add New emoji🤲</p>
+                        <p title="offerings to enhance user expression across its platforms,including Facebook, Messenger, and Instagram. By introducing new emojis, Meta aims to provide users with a richer and more diverse way to communicate emotions, reactions, and ideas in digital conversations."
+                            class="p-3 text-gray-400 bg-white rounded-lg text-ellipsis whitespace-nowrap overflow-hidden">
+                            Meta is expanding its emoji <br> offerings to enhance user expression across its platforms,
+                            including Facebook, Messenger, and Instagram. By introducing new emojis, Meta aims to provide
+                            users
+                            with a richer and more diverse way to communicate emotions, reactions, and ideas in digital
+                            conversations.</p>
+                        <hr class="border-dashed">
+                        <div class="flex justify-between">
+                            <div>
+                                <p class="text-gray-500 text-sm">Deadline</p>
+                                <p>21 March 2025</p>
+                            </div>
+                            <button id="btn-four" class="btn  btn-completed border-none hover:bg-amber-600 text-white bg-[#3752FD]">Completed</button>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-blue-50 space-y-4">
+                        <button class="px-3 py-2 rounded-lg bg-white">Google LLC</button>
+                        <p id="task-five" class="2xl:text-2xl text-xl font-[500]">Integrate OpenAI API</p>
+                        <p title="integrating OpenAI’s API into its ecosystem to enhance AI-driven services, automation, and cloud-based applications"
+                            class="p-3 text-gray-400 bg-white rounded-lg text-ellipsis whitespace-nowrap overflow-hidden">
+                            Google LLC has been increasingly <br> integrating OpenAI’s API into its ecosystem to enhance
+                            AI-driven services, automation, and cloud-based applications</p>
+                        <hr class="border-dashed">
+                        <div class="flex justify-between">
+                            <div>
+                                <p class="text-gray-500">Deadline</p>
+                                <p>21 March 2025</p>
+                            </div>
+                            <button id="btn-five" class="btn  btn-completed border-none hover:bg-yellow-500 text-white bg-[#3752FD]">Completed</button>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-blue-50 space-y-4">
+                        <button class="px-3 py-2 rounded-lg bg-white">Glassdoar</button>
+                        <p id="task-six" class="2xl:text-2xl text-xl font-[500]">Improve Job Searching</p>
+                        <p title="enhancing its platform by integrating advanced AI technologies, including OpenAI’s API, to improve job searching and career insights."
+                            class="p-3 text-gray-400 bg-white rounded-lg text-ellipsis whitespace-nowrap overflow-hidden">
+                            Glassdoor is continuously <br> enhancing its platform by integrating advanced AI technologies,
+                            including OpenAI’s API, to improve job searching and career insights.</p>
+                        <hr class="border-dashed">
+                        <div class="flex justify-between">
+                            <div>
+                                <p class="text-gray-500 text-sm">Deadline</p>
+                                <p>21 March 2025</p>
+                            </div>
+                            <button id="btn-six" class="btn  btn-completed border-none text-white bg-[#3752FD]">Completed</button>
+                        </div>
+                    </div>
+                </section>
+                 <!-- Activity Section -->
+        <section class="p-5 rounded-xl lg:col-span-2 mt-8 lg:mt-0 space-y-4 bg-white">
+            <div class="flex justify-center gap-3">
+                <img src="assets/activity.png" alt="">
+                <p>Activity Log</p>
+            </div>
+            <div class="flex justify-center">
+                <button id="clear-btn" class="bg-[#3752FD] btn border-none hover:bg-red-800 text-white">Clear History</button>
+            </div>
+            <hr class="border-dashed">
+            <div id="activity-container">
+            </div>
+        </section>
+    </main>
+    <script src="js/main.js"></script>
+    <script src="js/utilities.js"></script>
 </body>
 
 </html>
